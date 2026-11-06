@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="midnight">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GTab — настройки</title>
+  <link rel="icon" href="icons/icon32.png">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="brand.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <span class="logo" aria-hidden="true">G</span>
+      <div class="titles">
+        <h1>GTab</h1>
+        <p class="sub">Настройки новой вкладки</p>
+      </div>
+      <span class="ver">v1.0</span>
+    </header>
+
+    <section>
+      <h2>Тема</h2>
+      <p class="hint">Оформление новой вкладки. Все темы тёмные — как и задумано.</p>
+      <div class="grid themes" id="themes" role="radiogroup" aria-label="Тема оформления"></div>
+    </section>
+
+    <section>
+      <h2>Акцент</h2>
+      <p class="hint">Цвет кнопки, подсветки строки и свечения. «Системный» — стандартный синий акцент Windows, его можно заменить любым своим.</p>
+      <div class="accents" id="accents" role="radiogroup" aria-label="Акцентный цвет"></div>
+      <label class="custom">
+        <input type="color" id="accentPicker" value="#0078D4" aria-label="Свой акцентный цвет">
+        <span>Свой цвет</span>
+        <code id="accentValue">#0078D4</code>
+      </label>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Поисковая система</h2>
+          <p class="hint">Куда уходит запрос и какая анимация проигрывается при открытии вкладки.</p>
+        </div>
+        <button class="ghost small" id="replay" type="button">Повторить анимацию</button>
+      </div>
+      <div class="grid engines" id="engines" role="radiogroup" aria-label="Поисковая система"></div>
+    </section>
+
+    <section>
+      <h2>Ключевые слова</h2>
+      <p class="hint">Введите одно из слов в строку новой вкладки — откроется сервис вместо выдачи.</p>
+      <div id="shortcuts"></div>
+    </section>
+
+    <footer>
+      <button class="ghost" id="reset" type="button">Сбросить настройки</button>
+      <span class="foot">GTab · JunDevX</span>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Сохранено</div>
+
+  <script src="common.js"></script>
+  <script src="brand.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
