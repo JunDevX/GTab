@@ -1,5 +1,7 @@
 # GTab
 
+Русский | [English](https://github.com/JunDevX/GTab/blob/main/README-en.md)
+
 **Новая вкладка = новый стиль.**
 
 ![version](https://img.shields.io/badge/version-1.0-blue)
